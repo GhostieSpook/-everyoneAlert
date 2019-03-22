@@ -1,0 +1,56 @@
+//META{"name":"@everyoneAlert","description":"This Theme Makes @everyone alerts change to look better","author":"GhostieSpook","version":"1.0"}*//{}
+
+/*
+  It's a simple css file that changes alert when you mention @everyone or @here at discord server that has a lot of users.
+  To make it work you need BetterDiscord installed, you can add this css to your theme file or "Custom css" tab in user settings.
+  This will break someday, discord like to change classnames and the alert itself can change I'll try to keep this working but 
+  I don't promise anything.
+  If you have theme that changes alert this one might not work by just pasteing it, you probably need to find code for it in 
+  your theme and replace it.
+*/
+
+/* everyone mention alert */
+.body-2iXqIL.da-body {
+  padding: 0;
+  display: flex;
+}
+/* image div */
+.animation-3GofIz.da-animation {
+  background: url("https://i.imgur.com/DP1Rthj.png");
+  background-size: contain;
+  height: 160px;
+  width: 310px;
+  align-self: flex-end;
+  background-repeat: no-repeat;
+}
+/* old svg */
+.animation-3GofIz.da-animation svg {
+  display: none;
+}
+/* right box */
+.content-L5mYq4.da-content {
+  margin: 0px;
+  padding: 20px;
+}
+/* text on right */
+div.content-L5mYq4.da-content > div:nth-child(2):after {
+  background: #36393f;
+  content: "By using @every1, you are about to cause many people to make angry ping noises. Are you sure?";
+  position: absolute;
+  left: 185px;
+  top: 42px;
+  padding: 2px 0px 0px 2px;
+  width: 230px !important;
+  font-weight: 600;
+  height: 50px;
+}
+/* Bottom text */
+.theme-dark .footer-2aTx0s > div:after {
+  content: "Maybe try mentioning a role or individual members instead?";
+  background: #2c2f34;
+  position: absolute;
+  left: 25px;
+  display: inline-block;
+  height: 20px;
+  padding: 0px 3px;
+}
